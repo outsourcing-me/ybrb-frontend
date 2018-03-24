@@ -7,21 +7,27 @@ function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
+function addEnty() {
+  let entryObj = { hotload: 'webpack-hot-middleware/client?path=http://localhost:8080/__webpack_hmr' }
+  utils.getEntry().forEach(item => {
+    entryObj[item] = resolve('src/' + item + '/index.js')
+  })
+  console.log(entryObj)
+  return entryObj
+}
+
 module.exports = {
-  entry: {
-    index: './src/home/index.js',
-  },
+  entry: addEnty,
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production' ?
-      config.build.assetsPublicPath :
-      config.dev.assetsPublicPath
+      config.build.assetsPublicPath : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.json'],
+    extensions: ['.js', '.json', '.stylus', '.styl', '.ejs'],
     alias: {
-      // 'vue$': 'vue/dist/vue.esm.js',
+      'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src')
     }
   },
@@ -41,61 +47,34 @@ module.exports = {
         include: [resolve('src'), resolve('test')]
       },
       {
+        test: /\.(html)$/,
+        loader: 'html-loader',
+        include: [resolve('src'), resolve('test')],
+        options: {}
+      },
+      {
+        test: /\.(ejs)$/,
+        // use: ['ejs-compiled-loader'],
+        loader: 'ejs-compiled-loader',
+        include: [resolve('src/common')]
+        // options: { raw: true }
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
+        include: [resolve('src/assets/imgs')],
         query: {
           limit: 10000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
       },
       {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
         loader: 'url-loader',
         query: {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      },
-      {
-        test: /\.(styl|stylus)$/,
-        use: [
-          { loader: require.resolve('style-loader'), options: { sourceMap: true } },
-          {
-            loader: require.resolve('css-loader'),
-            options: {
-              sourceMap: true,
-              importLoaders: 1,
-            },
-          },
-          {
-            loader: require.resolve('postcss-loader'),
-            options: {
-              // Necessary for external CSS imports to work
-              // https://github.com/facebookincubator/create-react-app/issues/2677
-              ident: 'postcss',
-              sourceMap: true,
-              plugins: () => [
-                require('postcss-flexbugs-fixes'),
-                autoprefixer({
-                  browsers: [
-                    '>1%',
-                    'last 4 versions',
-                    'Firefox ESR',
-                    'not ie < 9', // React doesn't support IE8 anyway
-                  ],
-                  flexbox: 'no-2009',
-                }),
-              ],
-            },
-          },
-          {
-            loader: 'stylus-loader',
-            options: {
-              sourceMap: true
-              // use: [stylus_plugin()],
-            },
-          },
-        ],
       }
     ]
   }

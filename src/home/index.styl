@@ -1,0 +1,121 @@
+@import '../common/_vars';
+@import '../common/base';
+@import '../common/common';
+@import '../common/layout';
+@import '../common/tag';
+@import '../common/card';
+@import '//at.alicdn.com/t/font_603676_i8wvdxq7l8veu3di.css';
+
+.headline {
+  background-color: xx;
+  padding: 15px 100px 30px;
+  position: relative;
+  h2 {
+    font-size: 36px;
+    text-align: center;
+    margin: 10px 0;
+  }
+  p {
+    color: x;
+  }
+  a {
+    color: red-color;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    border-bottom: 2px solid gray-color;
+  }
+  .star {
+    position: absolute;
+    left: -4px;
+    top: -4px;
+  }
+}
+
+.important-new {
+  background-color: xx;
+  figure {
+    margin: 0;
+    position: relative;
+  }
+  figcaption {
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+    bottom: 10px;
+    color: white;
+    h3 {
+      font-size: 36px;
+    }
+  }
+  .el-carousel__indicators {
+    right: 10px;
+    left: auto;
+  }
+  .el-carousel__indicator.is-active button {
+    box-shadow: 0 0 1px 2px main-color;
+  }
+  .el-carousel__button {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+  .keywords {
+    color: white;
+    background-color: main-color;
+    h4 {
+      font-size: 16px;
+      line-height: 35px;
+      padding: 0 10px;
+      border-bottom: 1px solid white;
+    }
+  }
+  .keywords-item {
+    padding: 5px 10px;
+    overflow: hidden;
+    a {
+      color: inherit;
+    }
+    li {
+      margin-right: 10px;
+      float: left;
+    }
+  }
+  .news-list {
+    overflow: hidden;
+    background-color: xx;
+    padding: 15px;
+    .header {
+      padding-bottom: 5px;
+      border-bottom: 2px solid small-gray-color;
+      a {
+        color: l-gray-color;
+        &:hover {
+          color: main-color;
+        }
+      }
+    }
+    .new-card {
+      overflow: hidden;
+      padding: 5px 0;
+      line-height: 2em;
+      h3 {
+        margin: 5px 0;
+        font-size: 22px;
+      }
+      .new-link {
+        margin-right: 30px;
+        float: left;
+        color: minor-font-color;
+      }
+    }
+    h4 {
+      font-size: 16px;
+      color: main-color;
+    }
+  }
+}

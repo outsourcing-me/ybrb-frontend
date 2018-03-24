@@ -1,0 +1,71 @@
+<header>
+  <!-- 顶部banner -->
+  <img src="<%- require('@/assets/imgs/header.jpg') %>" height="120" width="960" alt="" />
+  <!-- 搜索栏 -->
+  <section class="search-bar">
+    <el-row>
+      <el-col :span="12">
+        <div class="grid-content bg-purple-dark">国家一类新闻网站、吉林省重点网站、延边唯一权威新闻网站</div>
+      </el-col>
+      <el-col :span="12">
+        <el-row :gutter="10">
+          <el-col :span="10" class="text-right">
+            <a href="">联系我们</a>
+          </el-col>
+          <el-col :span="14">
+            <el-col :span="4" class="text-right">搜索</el-col>
+            <el-col :span="20">
+              <input type="text" class="search-btn" />
+              <i class="iconfont icon-search"></i>
+            </el-col>
+          </el-col>
+        </el-row>
+      </el-col>
+    </el-row>
+  </section>
+  <!-- 二级header -->
+  <section class="slogan-header">
+    <el-row>
+      <el-col :span="12">
+        <img src="<%- require('@/assets/imgs/logo1.jpg') %>" alt="" />
+        <img class="ml10" src="<%- require('@/assets/imgs/logo2.jpg') %>" alt="" />
+        <div class="mt5">
+          <small>2018年11月24日 延吉 多云 -2 ~ 4℃ 东风3级</small>
+        </div>
+      </el-col>
+      <el-col :span="12" class="text-right">
+        <img src="<%- require('@/assets/imgs/header-side.jpg') %>" alt="" />
+      </el-col>
+    </el-row>
+  </section>
+
+  <!-- 菜单 -->
+  <section class="menu">
+    <nav class="main-nav">
+      <a href="">
+        <i class="iconfont icon-home ft20"></i>
+      </a>
+      <a class="active" href="">新闻</a>
+      <a href="">社会</a>
+      <a href="">国内</a>
+      <a href="">国际</a>
+      <a class="blue" href="">视频</a>
+      <a class="green" href="">直播</a>
+      <a class="green" href="">图片</a>
+      <a class="green" href="">行摄延边</a>
+      <a class="yellow" href="">房产•汽车•财经</a>
+      <a class="orange" href="">健康•教育</a>
+      <a class="orange" href="">老牛侃球</a>
+      <a class="purple" href="">旅游•美食•购物</a>
+    </nav>
+    <nav class="sub-nav">
+      <a href="">熱醫</a>
+      <a href="">共化</a>
+      <a href="">中當人不</a>
+      <a href="">維引</a>
+      <a href="">廣理</a>
+      <a href="">國千</a>
+      <a href="">此企</a>
+    </nav>
+  </section>
+</header>
