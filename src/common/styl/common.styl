@@ -1,3 +1,6 @@
+@import '//at.alicdn.com/t/font_603676_tdyd2fk9oym34n29.css';
+@import '~swiper/dist/css/swiper.css';
+@import '~element-ui/lib/theme-default/index.css';
 html {
   height: 100%;
 }
@@ -5,6 +8,7 @@ html {
 a {
   color: main-color;
   text-decoration: none;
+  cursor: pointer;
   &:hover {
     text-decoration: none;
   }
@@ -19,8 +23,8 @@ a {
 body {
   // font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-family: 'Helvetica Neue', 'Helvetica', tahoma, 'Hiragino Sans GB', 'PingFang SC', 'STHeitiSC-Light', 'Microsoft YaHei', Arial, sans-serif; // background: white;
-  width: 960px;
-  margin: 0 auto;
+  // width: 960px;
+  // margin: 0 auto;
   min-height: 100vh;
   min-height: 100%;
   color: font-color;
@@ -144,6 +148,10 @@ for index in (1..10) {
   float: right;
 }
 
+.db {
+  display block;
+}
+
 .clfix {
   &:after {
     content: '';
@@ -151,8 +159,12 @@ for index in (1..10) {
   }
 }
 
+img {
+  vertical-align: top;
+}
+
 small {
-  color: x;
+  color: xs-gray-color;
 }
 
 .ell {

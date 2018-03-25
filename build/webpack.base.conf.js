@@ -8,7 +8,7 @@ function resolve(dir) {
 }
 
 function addEnty() {
-  let entryObj = { hotload: 'webpack-hot-middleware/client?path=http://localhost:8080/__webpack_hmr' }
+  let entryObj = {}
   utils.getEntry().forEach(item => {
     entryObj[item] = resolve('src/' + item + '/index.js')
   })
@@ -64,16 +64,16 @@ module.exports = {
         loader: 'url-loader',
         include: [resolve('src/assets/imgs')],
         query: {
-          limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]')
+          limit: 1000,
+          name: utils.assetsPath('img/[name].[ext]')
         }
       },
       {
         test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
         loader: 'url-loader',
         query: {
-          limit: 10000,
-          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+          limit: 1000,
+          name: utils.assetsPath('fonts/[name].[ext]')
         }
       }
     ]

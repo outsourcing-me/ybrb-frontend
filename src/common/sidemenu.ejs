@@ -1,0 +1,22 @@
+<nav class="side-menu" v-if="sideMenuVisible">
+  <div class="navs">
+    <a class="active" href="">导航标题</a>
+    <a href="">导航标题</a>
+    <a href="">导航标题</a>
+    <a href="">导航标题</a>
+    <a href="">导航标题</a>
+  </div>
+  <div class="ad-container">
+    <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+  </div>
+  <div class="buttons">
+    <el-row>
+      <el-col :span="12" class="text-center">
+        <a onclick="window.scrollTo(0, 0)" class="normal-link"><i class="iconfont icon-arrowsupline"></i></a>
+      </el-col>
+      <el-col :span="12" class="text-center">
+        <a @click="sideMenuVisible = false" class="normal-link"><i class="iconfont icon-close"></i></a>
+      </el-col>
+    </el-row>
+  </div>
+</nav>

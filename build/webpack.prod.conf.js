@@ -23,8 +23,8 @@ var webpackConfig = merge(baseWebpackConfig, {
   devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
     path: config.build.assetsRoot,
-    filename: utils.assetsPath('js/[name].[chunkhash].js'),
-    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+    filename: utils.assetsPath('js/[name].js'),
+    chunkFilename: utils.assetsPath('js/[id].js')
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
@@ -32,12 +32,12 @@ var webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      },
-      sourceMap: true
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     warnings: false
+    //   },
+    //   sourceMap: true
+    // }),
     ...utils.pageExtractCssArray,
     // extract css into its own file
     // new ExtractTextPlugin({
@@ -119,7 +119,10 @@ if (config.build.bundleAnalyzerReport) {
 utils.getEntry().forEach(pathname => {
   let conf = {
     filename: pathname + '.html',
-    template: 'ejs-compiled-loader!' + path.join(__dirname, '../src', pathname, 'index.ejs')
+    template: 'ejs-compiled-loader!' + path.join(__dirname, '../src', pathname, 'index.ejs'),
+    inject: true,
+    chunks: ['manifest', 'vendor', pathname],
+    chunksSortMode: 'dependency'
   }
   webpackConfig.plugins.push(new HtmlWebpackPlugin(conf))
 })

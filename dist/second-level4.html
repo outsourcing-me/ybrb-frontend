@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="user-scalable=yes,initial-scale=0,minimum-scale=0,maximum-scale=10.0">
+  <title>延边日报</title>
+  <style>
+  [v-cloak] {
+    display: none;
+  }
+  </style>
+<link href="/static/css/second-level4.css" rel="stylesheet"></head>
+
+
+  <body>
+    <div id="app">
+      <div class="container" v-cloak>
+        <nav class="side-menu" v-if="sideMenuVisible">
+  <div class="navs">
+    <a class="active" href="">导航标题</a>
+    <a href="">导航标题</a>
+    <a href="">导航标题</a>
+    <a href="">导航标题</a>
+    <a href="">导航标题</a>
+  </div>
+  <div class="ad-container">
+    <img src="/static/img/demo105x105.jpg" alt="" />
+  </div>
+  <div class="buttons">
+    <el-row>
+      <el-col :span="12" class="text-center">
+        <a onclick="window.scrollTo(0, 0)" class="normal-link"><i class="iconfont icon-arrowsupline"></i></a>
+      </el-col>
+      <el-col :span="12" class="text-center">
+        <a @click="sideMenuVisible = false" class="normal-link"><i class="iconfont icon-close"></i></a>
+      </el-col>
+    </el-row>
+  </div>
+</nav>
+
+          <div class="body">
+            <header>
+  <!-- 顶部banner -->
+  <img src="/static/img/header.jpg" height="120" width="960" alt="" />
+  <!-- 搜索栏 -->
+  <section class="search-bar">
+    <el-row>
+      <el-col :span="12">
+        <div class="grid-content bg-purple-dark">国家一类新闻网站、吉林省重点网站、延边唯一权威新闻网站</div>
+      </el-col>
+      <el-col :span="12">
+        <el-row :gutter="10">
+          <el-col :span="4" :offset="2" class="text-right">
+            <el-popover ref="popover1" placement="bottom-start" title="" width="330" trigger="hover" popper-class="popover-mobile">
+              <div class="inner">
+                <div class="line">
+                  <img src="/static/img/icon-wx.png" alt="" />
+                  <p>搜索微信公众号：
+                    <br> yanbianribao</p>
+                </div>
+                <div class="line">
+                  <img src="/static/img/icon-wb.png" alt="" />
+                  <p>搜索微博账号：
+                    <br> 延边日报</p>
+                </div>
+                <div class="line">
+                  <img src="/static/img/icon-app.png" alt="" />
+                  <p>前往Apple Store或Android应用商店下载：
+                    <br> 延边日报</p>
+                </div>
+              </div>
+            </el-popover>
+            <a v-popover:popover1 href="">移动端</a>
+          </el-col>
+          <el-col :span="4" class="text-right">
+            <el-popover ref="popover2" placement="bottom-start" title="" width="330" trigger="hover" popper-class="popover-contact">
+              <div class="inner">
+                <a href="https://map.baidu.com/?latlng=42.907903,129.51832&title=延边日报&autoOpen=true&l" target="_blank">
+                  <img src="/static/img/address.jpg" alt="" />
+                </a>
+                <div class="detail">
+                  <p>地址：吉林省延吉市光明街89号 </p>
+                  <p>邮编：133000</p>
+                  <p>电话：<a href="tel:0433-2518770">0433-2518770</a></p>
+                  <p>邮箱：<a href="mailto:yanbianwanghanwen@qq.com">yanbianwanghanwen@qq.com</a></p>
+                </div>
+              </div>
+            </el-popover>
+            <a v-popover:popover2 href="">联系我们</a>
+          </el-col>
+          <el-col :span="14">
+            <el-col :span="4" class="text-right">搜索</el-col>
+            <el-col :span="20">
+              <form action="">
+                <input v-model="searchValue" type="text" class="search-btn" @keydown.13.prevent="search" />
+                <i class="iconfont icon-search" @click="search"></i>
+              </form>
+            </el-col>
+          </el-col>
+        </el-row>
+      </el-col>
+    </el-row>
+  </section>
+  <!-- 二级header -->
+  <section class="slogan-header">
+    <el-row>
+      
+          <el-col :span="12" class="header2">
+            <img class="fl" src="/static/img/logo3.jpg" alt="" />
+            <div class="weather mt40">
+              <small>2018年11月24日 <br>延吉 多云 -2 ~ 4℃ 东风3级</small>
+            </div>
+          </el-col>
+          
+        <el-col :span="12" class="text-right">
+          <img src="/static/img/header-side.jpg" alt="" />
+        </el-col>
+    </el-row>
+  </section>
+
+  <!-- 菜单 -->
+  
+  <section class="menu green">
+    <nav class="main-nav">
+      <a href="">
+        <i class="iconfont icon-home ft20"></i>
+      </a>
+      <a class="active" href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+    </nav>
+  </section>
+
+</header>
+
+              <!-- 重要新闻栏 -->
+              <section class="important-new mt30">
+                <el-row>
+                  <el-col :span="24">
+                    <el-carousel height="395px">
+                      <el-carousel-item>
+                        <figure>
+                          <a href=""><img src="/static/img/demo960x395.jpg" alt="" /></a>
+                          <figcaption>
+                            <h3>人大首场发布会</h3>
+                            <p>3月4日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                          </figcaption>
+                        </figure>
+                      </el-carousel-item>
+                      <el-carousel-item>
+                        <figure>
+                          <a href=""><img src="/static/img/demo960x395.jpg" alt="" /></a>
+                          <figcaption>
+                            <h3>人大首场发布会</h3>
+                            <p>3月4日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                          </figcaption>
+                        </figure>
+                      </el-carousel-item>
+                  </el-col>
+                </el-row>
+              </section>
+              <section class="mt20 mb20">
+
+                <div class="img-slide8" style="width: 900px;">
+                  <swiper :options="{
+                          slidesPerView: 4,
+                          slidesPerColumn: 2,
+                          loop: true,
+                          navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                          },
+                          spaceBetween: 0,
+                          autoplay: true
+                        }" ref="img8Swiper">
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="/static/img/demo217x217.png" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="/static/img/demo217x217.png" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="/static/img/demo217x217.png" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="/static/img/demo217x217.png" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="/static/img/demo217x217.png" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="/static/img/demo217x217.png" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="/static/img/demo217x217.png" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="/static/img/demo217x217.png" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="/static/img/demo217x217.png" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="/static/img/demo217x217.png" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="/static/img/demo217x217.png" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="/static/img/demo217x217.png" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="/static/img/demo217x217.png" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="/static/img/demo217x217.png" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="/static/img/demo217x217.png" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="/static/img/demo217x217.png" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="/static/img/demo217x217.png" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="/static/img/demo217x217.png" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="/static/img/demo217x217.png" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="/static/img/demo217x217.png" alt="" />
+                        </a>
+                    </swiper-slide>
+                  </swiper>
+                  <div>
+                    <img src="/static/img/icon-left-green.png" class="icon-left" @click="$refs.img8Swiper.swiper.slidePrev()" />
+                  </div>
+                  <div>
+                    <img src="/static/img/icon-right-green.png" class="icon-right" @click="$refs.img8Swiper.swiper.slideNext()" />
+                  </div>
+                </div>
+              </section>
+              <!-- 专题 -->
+              <section class="mt30">
+                <el-row>
+                  <el-col :span="24">
+                    <div class="simple-card">
+                      <div class="simple-card-header green">
+                        <h3 class="title">要闻荐读 FOCUS</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <figure class="full-figure">
+                          <a href=""><img src="/static/img/demo960x395.jpg" alt="" /></a>
+                          <figcaption>
+                            <h3>傳處人血氣面節商老奇就</h3>
+                            <p>著響一別西反想絕全動水知意社技得熱醫共化中 知意社技當人不維引
+                            </p>
+                            <p>廣理國千此企畫母很化消人引廣理</p>
+                            <p>著響一別西反想絕全動水知意社技得熱醫共化中 知意社技當人不維引
+                            </p>
+                            <a class="db normal-link pt30" href="">查看完整图集</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </el-col>
+                </el-row>
+                <el-row class="mt20" :gutter="20">
+                  <el-col :span="12">
+                    <div class="simple-card">
+                      <div class="simple-card-content">
+                        <figure class="simple-figure">
+                          <a href=""><img src="/static/img/demo960x395.jpg" alt="" /></a>
+                          <figcaption>
+                            <h3>傳處人血氣面節商老奇就</h3>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="12">
+                    <div class="simple-card">
+                      <div class="simple-card-content">
+                        <figure class="simple-figure">
+                          <a href=""><img src="/static/img/demo960x395.jpg" alt="" /></a>
+                          <figcaption>
+                            <h3>傳處人血氣面節商老奇就</h3>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <section class="mt30 mb30">
+                <a href="">
+                <img src="/static/img/ad-demo.jpg" alt="" />
+              </a>
+              </section>
+          </div>
+          <footer>
+  <div class="footer-container">
+    <section class="corperations">
+      <div class="footer-title">
+        合作网站及媒体
+      </div>
+      <div class="tabs">
+        <a :class="{'active': footTab === '1'}" @click="footTab = '1'">标题1</a>
+        <a :class="{'active': footTab === '2'}" @click="footTab = '2'">标题2</a>
+        <a :class="{'active': footTab === '3'}" @click="footTab = '3'">标题3</a>
+        <a :class="{'active': footTab === '4'}" @click="footTab = '4'">标题4</a>
+      </div>
+      <div class="tabs-container" v-if="footTab === '1'">
+        <div class="tab-item">
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+        </div>
+      </div>
+      <div class="tabs-container" v-else-if="footTab === '2'">
+        <div class="tab-item">
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+        </div>
+      </div>
+      <div class="tabs-container" v-else-if="footTab === '3'">
+        <div class="tab-item">
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+        </div>
+      </div>
+      <div class="tabs-container" v-else-if="footTab === '4'">
+        <div class="tab-item">
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+        </div>
+      </div>
+      
+          <div class="qrcode">
+            <figure>
+              <img src="/static/img/wx-gzh.png" alt="" />
+              <figcaption>扫描二维码
+                <br>关注公众号</figcaption>
+            </figure>
+            <figure>
+              <img src="/static/img/wx-qun.png" alt="" />
+              <figcaption>扫描二维码
+                <br>加入微信群</figcaption>
+            </figure>
+          </div>
+          
+    </section>
+    <div class="footer-info">
+      <p>延边网不良信息举报电话：<a class="normal-link" href="tel:0433-2518770">0433-2518770</a>   邮箱：<a class="normal-link" href="mailto:yanbianwanghanwen@qq.com">yanbianwanghanwen@qq.com</a> </p>
+      <p>地址：吉林省延吉市光明街89号 邮编：133000 </p>
+      <p>吉ICP备09000490号/互联网出版许可证号：吉新出网备字150号 </p>
+      <p>Copyright © 1997-2016 延边网版权所有 </p>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+    </div>
+    <!-- built files will be auto injected -->
+  <script type="text/javascript" src="/static/js/manifest.js"></script><script type="text/javascript" src="/static/js/vendor.js"></script><script type="text/javascript" src="/static/js/second-level4.js"></script></body>
+
+</html>

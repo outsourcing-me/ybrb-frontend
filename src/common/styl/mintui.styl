@@ -1,0 +1,45 @@
+.el-carousel {
+  figure {
+    margin: 0;
+    position: relative;
+  }
+  figcaption {
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+    bottom: 10px;
+    color: white;
+    &.fix-bottom {
+      bottom: 0;
+      right: 0;
+      left: 0; // line-height: 35px;
+      background-color: rgba(0, 0, 0, .5); // right: 50px;
+      p {
+        @extend .ell;
+        max-width: 260px;
+      }
+    }
+    h3 {
+      font-size: 36px;
+    }
+  }
+  .el-carousel__indicators {
+    right: 10px;
+    left: auto;
+  }
+  .el-carousel__indicator.is-active button {
+    box-shadow: 0 0 1px 2px main-color;
+  }
+  .el-carousel__button {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+}
+
+.el-breadcrumb__item:last-child .el-breadcrumb__item__inner,
+.el-breadcrumb__item:last-child .el-breadcrumb__item__inner a,
+.el-breadcrumb__item:last-child .el-breadcrumb__item__inner a:hover,
+.el-breadcrumb__item:last-child .el-breadcrumb__item__inner:hover {
+  color: gray-color;
+}

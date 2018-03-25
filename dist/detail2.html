@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="user-scalable=yes,initial-scale=0,minimum-scale=0,maximum-scale=10.0">
+  <title>延边日报</title>
+  <style>
+  [v-cloak] {
+    display: none;
+  }
+  </style>
+<link href="/static/css/detail2.css" rel="stylesheet"></head>
+
+
+  <body>
+    <div id="app">
+      <div class="container" v-cloak>
+        <nav class="side-menu" v-if="sideMenuVisible">
+  <div class="navs">
+    <a class="active" href="">导航标题</a>
+    <a href="">导航标题</a>
+    <a href="">导航标题</a>
+    <a href="">导航标题</a>
+    <a href="">导航标题</a>
+  </div>
+  <div class="ad-container">
+    <img src="/static/img/demo105x105.jpg" alt="" />
+  </div>
+  <div class="buttons">
+    <el-row>
+      <el-col :span="12" class="text-center">
+        <a onclick="window.scrollTo(0, 0)" class="normal-link"><i class="iconfont icon-arrowsupline"></i></a>
+      </el-col>
+      <el-col :span="12" class="text-center">
+        <a @click="sideMenuVisible = false" class="normal-link"><i class="iconfont icon-close"></i></a>
+      </el-col>
+    </el-row>
+  </div>
+</nav>
+
+          <div class="body">
+            <header>
+  <!-- 顶部banner -->
+  <img src="/static/img/header.jpg" height="120" width="960" alt="" />
+  <!-- 搜索栏 -->
+  <section class="search-bar">
+    <el-row>
+      <el-col :span="12">
+        <div class="grid-content bg-purple-dark">国家一类新闻网站、吉林省重点网站、延边唯一权威新闻网站</div>
+      </el-col>
+      <el-col :span="12">
+        <el-row :gutter="10">
+          <el-col :span="4" :offset="2" class="text-right">
+            <el-popover ref="popover1" placement="bottom-start" title="" width="330" trigger="hover" popper-class="popover-mobile">
+              <div class="inner">
+                <div class="line">
+                  <img src="/static/img/icon-wx.png" alt="" />
+                  <p>搜索微信公众号：
+                    <br> yanbianribao</p>
+                </div>
+                <div class="line">
+                  <img src="/static/img/icon-wb.png" alt="" />
+                  <p>搜索微博账号：
+                    <br> 延边日报</p>
+                </div>
+                <div class="line">
+                  <img src="/static/img/icon-app.png" alt="" />
+                  <p>前往Apple Store或Android应用商店下载：
+                    <br> 延边日报</p>
+                </div>
+              </div>
+            </el-popover>
+            <a v-popover:popover1 href="">移动端</a>
+          </el-col>
+          <el-col :span="4" class="text-right">
+            <el-popover ref="popover2" placement="bottom-start" title="" width="330" trigger="hover" popper-class="popover-contact">
+              <div class="inner">
+                <a href="https://map.baidu.com/?latlng=42.907903,129.51832&title=延边日报&autoOpen=true&l" target="_blank">
+                  <img src="/static/img/address.jpg" alt="" />
+                </a>
+                <div class="detail">
+                  <p>地址：吉林省延吉市光明街89号 </p>
+                  <p>邮编：133000</p>
+                  <p>电话：<a href="tel:0433-2518770">0433-2518770</a></p>
+                  <p>邮箱：<a href="mailto:yanbianwanghanwen@qq.com">yanbianwanghanwen@qq.com</a></p>
+                </div>
+              </div>
+            </el-popover>
+            <a v-popover:popover2 href="">联系我们</a>
+          </el-col>
+          <el-col :span="14">
+            <el-col :span="4" class="text-right">搜索</el-col>
+            <el-col :span="20">
+              <form action="">
+                <input v-model="searchValue" type="text" class="search-btn" @keydown.13.prevent="search" />
+                <i class="iconfont icon-search" @click="search"></i>
+              </form>
+            </el-col>
+          </el-col>
+        </el-row>
+      </el-col>
+    </el-row>
+  </section>
+  <!-- 二级header -->
+  <section class="slogan-header">
+    <el-row>
+      
+          <el-col :span="12" class="header2">
+            <img class="fl" src="/static/img/logo3.jpg" alt="" />
+            <div class="weather mt40">
+              <small>2018年11月24日 <br>延吉 多云 -2 ~ 4℃ 东风3级</small>
+            </div>
+          </el-col>
+          
+        <el-col :span="12" class="text-right">
+          <img src="/static/img/header-side.jpg" alt="" />
+        </el-col>
+    </el-row>
+  </section>
+
+  <!-- 菜单 -->
+  
+  <section class="menu green">
+    <nav class="main-nav">
+      <a href="">
+        <i class="iconfont icon-home ft20"></i>
+      </a>
+      <a class="active" href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+    </nav>
+  </section>
+
+</header>
+
+              <!-- 主要详情内容 -->
+              <section class="mt30">
+                <el-row>
+                  <el-col :span="24">
+                    <div class="simple-card">
+                      <div class="simple-card-header green">
+                        <h3 class="title">
+                          <el-breadcrumb separator-class="el-icon-arrow-right">
+                            <el-breadcrumb-item href=""><a href="">首页</a></el-breadcrumb-item>
+                            <el-breadcrumb-item href=""><a href="">二级页面</a></el-breadcrumb-item>
+                            <el-breadcrumb-item href=""><a href="">列表页</a></el-breadcrumb-item>
+                            <el-breadcrumb-item href=""><a href="">图片集名称</a></el-breadcrumb-item>
+                          </el-breadcrumb>
+                        </h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-detail-pic-card">
+                        <div class="title">
+                          <h4>舉的答來少溫題國平銷告不下<br>唱成學心影一房腳下大財小其</h4>
+                          <small>2018年2月26日 11:57:34 来源：参考消息网</small>
+                        </div>
+                        <div class="content">
+                          <div class="img-slide1" style="width: 900px">
+                            <swiper :options="{
+                                loop: true,
+                                spaceBetween: 10,
+                                loopedSlides: 5
+                              }" ref="img1Swiper">
+                              <swiper-slide>
+                                <figure>
+                                  <a class="img-box">
+                                      <img  src="/static/img/demo355x230.png" alt="" />
+                                    </a>
+                                  <figcaption>
+                                    <p>1唱成學心影一房腳下大財小其唱成學心影一房腳下大財小其唱成學心影一房腳下大財小其唱成學心影一房腳下大財小其</p>
+                                  </figcaption>
+                                </figure>
+
+                              </swiper-slide>
+                              <swiper-slide>
+                                <figure>
+                                  <a class="img-box">
+                                    <img  src="/static/img/demo960x395.jpg" alt="" />
+                                  </a>
+                                  <figcaption>
+                                    <p>2唱成學心影一房腳下大財小其唱成學心影一房腳下大財小其唱成學心影一房腳下大財小其唱成學心影一房腳下大財小其</p>
+                                  </figcaption>
+                                </figure>
+                              </swiper-slide>
+                            </swiper>
+                          </div>
+                          <!-- 缩略图 -->
+                          <div class="img-slide1 thumb" style="width: 880px">
+                            <swiper :options="{
+                                spaceBetween: 10,
+                                slidesPerView: 4,
+                                touchRatio: 0.2,
+                                loop: true,
+                                loopedSlides: 5,
+                                slideToClickedSlide: true
+                              }" ref="img1SwiperThumb">
+                              <swiper-slide>
+                                <figure>
+                                  <a class="img-box">
+                                      <img  src="/static/img/demo355x230.png" alt="" />
+                                    </a>
+                                </figure>
+                              </swiper-slide>
+                              <swiper-slide>
+                                <figure>
+                                  <a class="img-box">
+                                    <img  src="/static/img/demo960x395.jpg" alt="" />
+                                  </a>
+                                </figure>
+                              </swiper-slide>
+                            </swiper>
+                          </div>
+                        </div>
+                      </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <section class="mt30">
+                <el-row :gutter="20">
+                  <el-col :span="18">
+                    <!-- 评论 -->
+                    <div>
+                      <div class="simple-card">
+                        <div class="simple-card-header">
+                          <h3 class="title">
+                            评论区
+                          </h3>
+                        </div>
+                        <div class="simple-comment-card">
+                          <form action="">
+                            <div class="comment-textarea" :class="{'active': editable}">
+                              <p class="tip-login" v-if="!editable"><a @click="editable = true">登录</a>并发表你的评论，参与讨论</p>
+                              <textarea v-model="comment" v-if="editable" placeholder="我要评论" name="comment" id="" cols="30" rows="10"></textarea>
+                              <button @click.prevent="submitComment()"><i class="iconfont icon-edit"></i>
+                                <br>发布评论</button>
+                            </div>
+                          </form>
+                          <ul class="comment-list">
+                            <li v-for="item in comments" :key="item.id">
+                              <div class="comment-box">
+                                <img class="avatar" src="/static/img/icon-wx.png" alt="" />
+                                <div class="title">
+                                  <h3>{{item.title}}</h3>
+                                  <small>{{item.date}}</small>
+                                </div>
+                                <div class="content">
+                                  {{item.comment}}
+                                </div>
+                              </div>
+                              <div class="comment-btns">
+                                <button @click="likeIt(item)" :class="{active: item.isLike === true}">
+                                  <i class="iconfont icon-like"></i> 喜欢
+                                </button>
+                                <button @click="item.replyVisible = !item.replyVisible">
+                                  <i class="iconfont icon-edit"></i> 回复
+                                </button>
+                              </div>
+                              <div class="reply" v-if="item.replyVisible">
+                                <form action="">
+                                  <div class="comment-textarea" :class="{'active': editable}">
+                                    <p class="tip-login" v-if="!editable"><a @click="editable = true">登录</a>并发表你的评论，参与讨论</p>
+                                    <textarea v-model="item.reply" v-if="editable" placeholder="我要评论" name="comment" id="" cols="30" rows="10"></textarea>
+                                    <button @click.prevent="submitComment(item)"><i class="iconfont icon-edit"></i>
+                                      <br>发布评论</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+
+                  <el-col :span="6">
+                    <div class="simple-card">
+                      <div class="simple-card-header">
+                        <h3 class="title">专题区 SPECIA</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <a href=""><img src="/static/img/demo196x63.jpg" alt="" /></a>
+                        </div>
+                        <div class="card-p">
+                          <a href=""><img src="/static/img/demo196x63.jpg" alt="" /></a>
+                        </div>
+                        <div class="card-p">
+                          <a href=""><img src="/static/img/demo196x63.jpg" alt="" /></a>
+                        </div>
+                        <div class="card-p">
+                          <a href=""><img src="/static/img/demo196x63.jpg" alt="" /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                </el-row>
+
+              </section>
+
+              <!-- 广告 -->
+              <section class="mt30 mb30">
+                <a href="">
+                <img src="/static/img/ad-demo.jpg" alt="" />
+              </a>
+              </section>
+              </div>
+              <footer>
+  <div class="footer-container">
+    <section class="corperations">
+      <div class="footer-title">
+        合作网站及媒体
+      </div>
+      <div class="tabs">
+        <a :class="{'active': footTab === '1'}" @click="footTab = '1'">标题1</a>
+        <a :class="{'active': footTab === '2'}" @click="footTab = '2'">标题2</a>
+        <a :class="{'active': footTab === '3'}" @click="footTab = '3'">标题3</a>
+        <a :class="{'active': footTab === '4'}" @click="footTab = '4'">标题4</a>
+      </div>
+      <div class="tabs-container" v-if="footTab === '1'">
+        <div class="tab-item">
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+        </div>
+      </div>
+      <div class="tabs-container" v-else-if="footTab === '2'">
+        <div class="tab-item">
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+        </div>
+      </div>
+      <div class="tabs-container" v-else-if="footTab === '3'">
+        <div class="tab-item">
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+        </div>
+      </div>
+      <div class="tabs-container" v-else-if="footTab === '4'">
+        <div class="tab-item">
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+          <a href="">熱醫共化</a>
+          <a href="">中當人不</a>
+          <a href="">維引廣理</a>
+          <a href="">國千此企</a>
+          <a href="">畫母很化</a>
+        </div>
+      </div>
+      
+          <div class="qrcode">
+            <figure>
+              <img src="/static/img/wx-gzh.png" alt="" />
+              <figcaption>扫描二维码
+                <br>关注公众号</figcaption>
+            </figure>
+            <figure>
+              <img src="/static/img/wx-qun.png" alt="" />
+              <figcaption>扫描二维码
+                <br>加入微信群</figcaption>
+            </figure>
+          </div>
+          
+    </section>
+    <div class="footer-info">
+      <p>延边网不良信息举报电话：<a class="normal-link" href="tel:0433-2518770">0433-2518770</a>   邮箱：<a class="normal-link" href="mailto:yanbianwanghanwen@qq.com">yanbianwanghanwen@qq.com</a> </p>
+      <p>地址：吉林省延吉市光明街89号 邮编：133000 </p>
+      <p>吉ICP备09000490号/互联网出版许可证号：吉新出网备字150号 </p>
+      <p>Copyright © 1997-2016 延边网版权所有 </p>
+    </div>
+  </div>
+</footer>
+
+          </div>
+      </div>
+    </div>
+    <!-- built files will be auto injected -->
+  <script type="text/javascript" src="/static/js/manifest.js"></script><script type="text/javascript" src="/static/js/vendor.js"></script><script type="text/javascript" src="/static/js/detail2.js"></script></body>
+
+</html>

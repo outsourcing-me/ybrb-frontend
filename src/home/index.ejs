@@ -1,430 +1,855 @@
+<!DOCTYPE html>
+<html>
 <%- require('../common/head.ejs')() %>
-  <div id="app" v-cloak>
-    <div class="container">
-      <%- require('../common/header.ejs')() %>
-        <!-- 头条展示 -->
-        <section class="headline">
-          <img class="star" src="<%- require('@/assets/imgs/star-left.png') %>" alt="" />
-          <h2>“加减乘除”一起做 打造最优发展软环境</h2>
-          <p>
-            <span>2月27日，省委常委、州委书记姜治莹就深入落实全省“抓环境、抓项目、抓落实”大会精神到延吉市调研软环境建设工作。 他强调，要充分认识软环境建设的极端重要性和现实紧迫性，加大力度，常抓不懈，一抓到底，努力打造…… </span>
-            <a href="">阅读详情</a>
-          </p>
-        </section>
-        <!-- 重要新闻栏 -->
-        <section class="important-new mt30">
-          <el-row>
-            <el-col :span="12">
-              <el-carousel height="330px">
-                <el-carousel-item>
-                  <figure>
-                    <img src="<%- require('@/assets/imgs/demo480x333.jpg') %>" alt="" />
-                    <figcaption>
-                      <h3>人大首场发布会</h3>
-                      <p>3月4日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
-                    </figcaption>
-                  </figure>
-                </el-carousel-item>
-                <el-carousel-item>
-                  <figure height="">
-                    <img src="<%- require('@/assets/imgs/demo480x333.jpg') %>" alt="" />
-                    <figcaption>
-                      <h3>人大首场发布会2</h3>
-                      <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
-                    </figcaption>
-                  </figure>
-                </el-carousel-item>
-              </el-carousel>
-              <div class="keywords">
-                <h4>今日热词 KEYWORDS</h4>
-                <ul class="keywords-item">
-                  <li><a href="">顧達</a></li>
-                  <li><a href="">爸謝能</a></li>
-                  <li><a href="">日華</a></li>
-                  <li><a href="">出統入對特費心</a></li>
-                  <li><a href="">級族利就香該表</a></li>
-                  <li><a href="">意家</a></li>
-                  <li><a href="">完在如</a></li>
-                  <li><a href="">轉式身條復</a></li>
-                  <li><a href="">去男邊草可議身是客</a></li>
-                  <li><a href="">意華</a></li>
-                  <li><a href="">還傳們當</a></li>
-                  <li><a href="">南當</a></li>
-                  <li><a href="">結標大這心個</a></li>
-                </ul>
-              </div>
-            </el-col>
-            <el-col :span="12">
-              <div class="news-list">
-                <el-row class="header">
-                  <el-col :span="18">
-                    <h4>新闻 NEWS</h4>
-                  </el-col>
-                  <el-col :span="6" class="text-right">
-                    <a href="">更多
-                      <span class="ft18">&raquo;</span>
-                    </a>
-                  </el-col>
-                </el-row>
-                <div class="news-body">
-                  <div class="new-card">
-                    <h3><a class="new-link" href="">傳處人血氣面節商老奇就</a></h3>
-                    <a class="new-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                    <a class="new-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="new-card">
-                    <h3>
-                      <a class="new-link" href="">傳處人血氣面老奇就</a>
-                      <a class="new-link" href="">血氣面節商老奇就</a>
-                    </h3>
-                    <a class="new-link" href="">著響一別西反想</a>
-                    <a class="new-link" href="">著響一別西反想</a>
-                    <a class="new-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="new-card">
-                    <h3><a class="new-link" href="">傳處人血氣面節商老奇就</a></h3>
-                    <a class="new-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                    <a class="new-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                </div>
-              </div>
-            </el-col>
-          </el-row>
-        </section>
-        <!-- 视频 国内 国际 -->
-        <section class="three-column-card mt30">
-          <el-row :gutter="30">
-            <el-col :span="9">
-              <div class="simple-card">
-                <div class="simple-card-header blue">
-                  <h3 class="title">视频 VIDEO</h3>
-                  <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
-                </div>
-                <div class="simple-card-video">
-                  <figure>
-                    <img src="<%- require('@/assets/imgs/demo355x230.png') %>" alt="" />
-                    <figcaption>
-                      <h3>
-                        <img class="icon-play" src="<%- require('@/assets/imgs/play.png') %>" alt="" />
-                        <span class="content">马克龙政坛小鲜肉<br>的成长史</span>
-                      </h3>
-                      <!-- <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p> -->
-                    </figcaption>
-                  </figure>
-                  <ul class="video-list">
-                    <li>
-                      <a class="normal-link" href="">
-                        <img class="icon-video" src="<%- require('@/assets/imgs/icon-video.png') %>" alt="" />
-                        調本在觀隊止全指人
-                      </a>
-                    </li>
-                    <li>
-                      <a class="normal-link" href="">
-                        <img class="icon-video" src="<%- require('@/assets/imgs/icon-video.png') %>" alt="" />
-                        調本在觀隊止全指人
-                      </a>
-                    </li>
-                    <li>
-                      <a class="normal-link" href="">
-                        <img class="icon-video" src="<%- require('@/assets/imgs/icon-video.png') %>" alt="" />
-                        調本在觀隊止全指人
-                      </a>
-                    </li>
-                    <li>
-                      <a class="normal-link" href="">
-                        <img class="icon-video" src="<%- require('@/assets/imgs/icon-video.png') %>" alt="" />
-                        調本在觀隊止全指人
-                      </a>
-                    </li>
-                    <li>
-                      <a class="normal-link" href="">
-                        <img class="icon-video" src="<%- require('@/assets/imgs/icon-video.png') %>" alt="" />
-                        調本在觀隊止全指人
-                      </a>
-                    </li>
-                    <li>
-                      <a class="normal-link" href="">
-                        <img class="icon-video" src="<%- require('@/assets/imgs/icon-video.png') %>" alt="" />
-                        調本在觀隊止全指人
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </el-col>
-            <el-col :span="9">
-              <div class="simple-card">
-                <div class="simple-card-header">
-                  <h3 class="title">国内国际 WORLD</h3>
-                  <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
-                </div>
-                <div class="simple-card-content">
-                  <div class="card-p">
-                    <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                </div>
-              </div>
-            </el-col>
-            <el-col :span="6">
-              <div class="simple-card">
-                <div class="simple-card-header">
-                  <h3 class="title">快讯 FLASH</h3>
-                  <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
-                </div>
-                <div class="simple-card-content">
-                  <div class="card-p">
-                    <a class="normal-link" href="">晚间| 文太家員邊里試愛有更能</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href="">下午| 們輕行們法要只言黃用場</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href="">晚间| 文太家員邊里試愛有更能</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href="">下午| 們輕行們法要只言黃用場</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href="">晚间| 文太家員邊里試愛有更能</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href="">下午| 們輕行們法要只言黃用場</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href="">晚间| 文太家員邊里試愛有更能</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href="">下午| 們輕行們法要只言黃用場</a>
-                  </div>
-                </div>
-            </el-col>
-          </el-row>
-        </section>
-        <!-- 要闻荐读 FOCUS 社会 数字报 -->
-        <section class="three-column-card mt30">
-          <el-row :gutter="30">
-            <el-col :span="9">
-              <div class="simple-card">
-                <div class="simple-card-header">
-                  <h3 class="title">要闻荐读 FOCUS</h3>
-                  <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
-                </div>
-                <div class="simple-card-content">
-                  <div class="card-item">
-                    <h3>沒關千包到個不開這腦學性</h3>
-                    <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
-                  </div>
-                  <div class="card-item">
-                    <h3>沒關千包到個不開這腦學性</h3>
-                    <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
-                  </div>
-                  <div class="card-item">
-                    <h3>沒關千包到個不開這腦學性</h3>
-                    <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
-                  </div>
-                  <div class="card-item">
-                    <h3>沒關千包到個不開這腦學性</h3>
-                    <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
-                  </div>
-                </div>
-              </div>
-            </el-col>
-            <el-col :span="9">
-              <div class="simple-card">
-                <div class="simple-card-header">
-                  <h3 class="title">社会 SOCIAL</h3>
-                  <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
-                </div>
-                <div class="simple-card-content">
-                  <div class="card-p">
-                    <el-row :gutter="20">
-                      <el-col :span="8">
-                        <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
-                      </el-col>
-                      <el-col :span="8">
-                        <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
-                      </el-col>
-                      <el-col :span="8">
-                        <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
-                      </el-col>
-                    </el-row>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                  <div class="card-p">
-                    <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
-                  </div>
-                </div>
-              </div>
-            </el-col>
-            <el-col :span="6">
-              <div class="simple-card">
-                <div class="simple-card-header">
-                  <h3 class="title">快讯 FLASH</h3>
-                  <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
-                </div>
-                <div class="simple-card-content">
-                  <a href=""><img src="<%- require('@/assets/imgs/demo192x344.jpg') %>" alt="" /></a>
-                </div>
-            </el-col>
-          </el-row>
-        </section>
-        <!-- 专题 -->
-        <section class="three-column-card mt30">
-          <el-row>
-            <el-col :span="24">
-              <div class="simple-card">
-                <div class="simple-card-header">
-                  <h3 class="title">专题区 SPECIAL</h3>
-                  <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
-                </div>
-              </div>
-              <div class="simple-card-content">
-                <el-row :gutter="20">
+
+  <body>
+    <div id="app">
+      <div class="container" v-cloak>
+        <%- require('../common/sidemenu.ejs')() %>
+          <div class="body">
+            <%- require('../common/header.ejs')({header:'header1', menu: 'menu1'}) %>
+              <!-- 头条展示 -->
+              <section class="headline">
+                <img class="star" src="<%- require('@/assets/imgs/star-left.png') %>" alt="" />
+                <h2>“加减乘除”一起做 打造最优发展软环境</h2>
+                <p>
+                  <span>2月27日，省委常委、州委书记姜治莹就深入落实全省“抓环境、抓项目、抓落实”大会精神到延吉市调研软环境建设工作。 他强调，要充分认识软环境建设的极端重要性和现实紧迫性，加大力度，常抓不懈，一抓到底，努力打造…… </span>
+                  <a href="">阅读详情</a>
+                </p>
+              </section>
+              <!-- 重要新闻栏 -->
+              <section class="important-new mt30">
+                <el-row>
                   <el-col :span="12">
-                    <a href=""><img src="<%- require('@/assets/imgs/demo471x73.jpg') %>" alt="" /></a>
-                  </el-col>
-                  <el-col :span="12">
-                    <a href=""><img src="<%- require('@/assets/imgs/demo471x73.jpg') %>" alt="" /></a>
-                  </el-col>
-                </el-row>
-                <el-row class="mt20" :gutter="20">
-                  <el-col :span="6">
-                    <a href=""><img src="<%- require('@/assets/imgs/demo230x73.jpg') %>" alt="" /></a>
-                  </el-col>
-                  <el-col :span="6">
-                    <a href=""><img src="<%- require('@/assets/imgs/demo230x73.jpg') %>" alt="" /></a>
-                  </el-col>
-                  <el-col :span="6">
-                    <a href=""><img src="<%- require('@/assets/imgs/demo230x73.jpg') %>" alt="" /></a>
-                  </el-col>
-                  <el-col :span="6">
-                    <a href=""><img src="<%- require('@/assets/imgs/demo230x73.jpg') %>" alt="" /></a>
-                  </el-col>
-                </el-row>
-              </div>
-            </el-col>
-          </el-row>
-        </section>
-        <!-- 摄影图片 -->
-        <section class="three-column-card mt30">
-          <el-row>
-            <el-col :span="24">
-              <div class="simple-card">
-                <div class="simple-card-header green">
-                  <h3 class="title">行摄延边 PHOTOGRAPHY</h3>
-                  <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
-                </div>
-                <div class="simple-card-img">
-                  <el-row>
-                    <el-col :span="13">
-                      <a href="">
+                    <el-carousel height="330px">
+                      <el-carousel-item>
                         <figure>
-                          <img src="<%- require('@/assets/imgs/demo512x391.jpg') %>" alt="" />
+                          <a href=""><img src="<%- require('@/assets/imgs/demo480x333.jpg') %>" alt="" /></a>
                           <figcaption>
-                            <!-- <h3>人大首场发布会2</h3> -->
+                            <h3>人大首场发布会</h3>
+                            <p>3月4日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                          </figcaption>
+                        </figure>
+                      </el-carousel-item>
+                      <el-carousel-item>
+                        <figure height="">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo480x333.jpg') %>" alt="" /></a>
+                          <figcaption>
+                            <h3>人大首场发布会2</h3>
                             <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
                           </figcaption>
                         </figure>
+                      </el-carousel-item>
+                    </el-carousel>
+                    <div class="keywords">
+                      <h4>今日热词 KEYWORDS</h4>
+                      <ul class="keywords-item">
+                        <li><a href="">顧達</a></li>
+                        <li><a href="">爸謝能</a></li>
+                        <li><a href="">日華</a></li>
+                        <li><a href="">出統入對特費心</a></li>
+                        <li><a href="">級族利就香該表</a></li>
+                        <li><a href="">意家</a></li>
+                        <li><a href="">完在如</a></li>
+                        <li><a href="">轉式身條復</a></li>
+                        <li><a href="">去男邊草可議身是客</a></li>
+                        <li><a href="">意華</a></li>
+                        <li><a href="">還傳們當</a></li>
+                        <li><a href="">南當</a></li>
+                        <li><a href="">結標大這心個</a></li>
+                      </ul>
+                    </div>
+                  </el-col>
+                  <el-col :span="12">
+                    <div class="news-list">
+                      <el-row class="header">
+                        <el-col :span="18">
+                          <h4>新闻 NEWS</h4>
+                        </el-col>
+                        <el-col :span="6" class="text-right">
+                          <a href="">更多
+                      <span class="ft18">&raquo;</span>
+                    </a>
+                        </el-col>
+                      </el-row>
+                      <div class="news-body">
+                        <div class="new-card">
+                          <h3><a class="new-link" href="">傳處人血氣面節商老奇就</a></h3>
+                          <a class="new-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                          <a class="new-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="new-card">
+                          <h3>
+                      <a class="new-link" href="">傳處人血氣面老奇就</a>
+                      <a class="new-link" href="">血氣面節商老奇就</a>
+                    </h3>
+                          <a class="new-link" href="">著響一別西反想</a>
+                          <a class="new-link" href="">著響一別西反想</a>
+                          <a class="new-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="new-card">
+                          <h3><a class="new-link" href="">傳處人血氣面節商老奇就</a></h3>
+                          <a class="new-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                          <a class="new-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <!-- 视频 国内 国际 -->
+              <section class="mt30">
+                <el-row :gutter="30">
+                  <el-col :span="9">
+                    <div class="simple-card">
+                      <div class="simple-card-header blue">
+                        <h3 class="title">视频 VIDEO</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-video">
+                        <figure>
+                          <img src="<%- require('@/assets/imgs/demo355x230.png') %>" alt="" />
+                          <figcaption>
+                            <h3>
+                        <img class="icon-play" src="<%- require('@/assets/imgs/play.png') %>" alt="" />
+                        <span class="content">马克龙政坛小鲜肉<br>的成长史</span>
+                      </h3>
+                            <!-- <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p> -->
+                          </figcaption>
+                        </figure>
+                        <ul class="video-list">
+                          <li>
+                            <a class="normal-link" href="">
+                        <img class="icon-video" src="<%- require('@/assets/imgs/icon-video.png') %>" alt="" />
+                        調本在觀隊止全指人
                       </a>
-                    </el-col>
-                    <el-col :span="11">
-                      <el-row>
-                        <el-col :span="15">
-                          <a href="">
-                            <figure>
-                              <img height="238" src="<%- require('@/assets/imgs/demo512x391.jpg') %>" alt="" />
-                              <figcaption>
-                                <!-- <h3>人大首场发布会2</h3> -->
-                                <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
-                              </figcaption>
-                            </figure>
-                          </a>
+                          </li>
+                          <li>
+                            <a class="normal-link" href="">
+                        <img class="icon-video" src="<%- require('@/assets/imgs/icon-video.png') %>" alt="" />
+                        調本在觀隊止全指人
+                      </a>
+                          </li>
+                          <li>
+                            <a class="normal-link" href="">
+                        <img class="icon-video" src="<%- require('@/assets/imgs/icon-video.png') %>" alt="" />
+                        調本在觀隊止全指人
+                      </a>
+                          </li>
+                          <li>
+                            <a class="normal-link" href="">
+                        <img class="icon-video" src="<%- require('@/assets/imgs/icon-video.png') %>" alt="" />
+                        調本在觀隊止全指人
+                      </a>
+                          </li>
+                          <li>
+                            <a class="normal-link" href="">
+                        <img class="icon-video" src="<%- require('@/assets/imgs/icon-video.png') %>" alt="" />
+                        調本在觀隊止全指人
+                      </a>
+                          </li>
+                          <li>
+                            <a class="normal-link" href="">
+                        <img class="icon-video" src="<%- require('@/assets/imgs/icon-video.png') %>" alt="" />
+                        調本在觀隊止全指人
+                      </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="9">
+                    <div class="simple-card">
+                      <div class="simple-card-header">
+                        <h3 class="title">国内国际 WORLD</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="6">
+                    <div class="simple-card">
+                      <div class="simple-card-header">
+                        <h3 class="title">快讯 FLASH</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <a class="normal-link" href="">晚间| 文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">下午| 們輕行們法要只言黃用場</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">晚间| 文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">下午| 們輕行們法要只言黃用場</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">晚间| 文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">下午| 們輕行們法要只言黃用場</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">晚间| 文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">下午| 們輕行們法要只言黃用場</a>
+                        </div>
+                      </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <!-- 要闻荐读 FOCUS 社会 数字报 -->
+              <section class="mt30">
+                <el-row :gutter="30">
+                  <el-col :span="9">
+                    <div class="simple-card">
+                      <div class="simple-card-header">
+                        <h3 class="title">要闻荐读 FOCUS</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="9">
+                    <div class="simple-card">
+                      <div class="simple-card-header">
+                        <h3 class="title">社会 SOCIAL</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <el-row :gutter="20">
+                            <el-col :span="8">
+                              <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                            </el-col>
+                            <el-col :span="8">
+                              <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                            </el-col>
+                            <el-col :span="8">
+                              <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                            </el-col>
+                          </el-row>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="6">
+                    <div class="simple-card">
+                      <div class="simple-card-header">
+                        <h3 class="title">数字报 DIGITAL</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <a href=""><img src="<%- require('@/assets/imgs/demo192x344.jpg') %>" alt="" /></a>
+                      </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <!-- 专题 -->
+              <section class="mt30">
+                <el-row>
+                  <el-col :span="24">
+                    <div class="simple-card">
+                      <div class="simple-card-header">
+                        <h3 class="title">专题区 SPECIAL</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                    </div>
+                    <div class="simple-card-content">
+                      <el-row :gutter="20">
+                        <el-col :span="12">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo471x73.jpg') %>" alt="" /></a>
                         </el-col>
-                        <el-col :span="9">
-                          <a href="">
-                            <figure>
-                              <img height="238" src="<%- require('@/assets/imgs/demo512x391.jpg') %>" alt="" />
-                              <figcaption>
-                                <!-- <h3>人大首场发布会2</h3> -->
-                                <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
-                              </figcaption>
-                            </figure>
-                          </a>
+                        <el-col :span="12">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo471x73.jpg') %>" alt="" /></a>
                         </el-col>
                       </el-row>
-                      <el-row>
-                        <el-col :span="12">
-                          <a href="">
-                            <figure>
-                              <img height="156" src="<%- require('@/assets/imgs/demo512x391.jpg') %>" alt="" />
-                              <figcaption>
-                                <!-- <h3>人大首场发布会2</h3> -->
-                                <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
-                              </figcaption>
-                            </figure>
-                          </a>
+                      <el-row class="mt20" :gutter="20">
+                        <el-col :span="6">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo230x73.jpg') %>" alt="" /></a>
                         </el-col>
-                        <el-col :span="12">
-                          <a href="">
-                            <figure>
-                              <img height="156" src="<%- require('@/assets/imgs/demo512x391.jpg') %>" alt="" />
-                              <figcaption>
-                                <!-- <h3>人大首场发布会2</h3> -->
-                                <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
-                              </figcaption>
-                            </figure>
-                          </a>
+                        <el-col :span="6">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo230x73.jpg') %>" alt="" /></a>
+                        </el-col>
+                        <el-col :span="6">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo230x73.jpg') %>" alt="" /></a>
+                        </el-col>
+                        <el-col :span="6">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo230x73.jpg') %>" alt="" /></a>
                         </el-col>
                       </el-row>
-                    </el-col>
-                  </el-row>
-                </div>
+                    </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <!-- 摄影图片 -->
+              <section class="mt30">
+                <el-row>
+                  <el-col :span="24">
+                    <div class="simple-card">
+                      <div class="simple-card-header green">
+                        <h3 class="title">行摄延边 PHOTOGRAPHY</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-img">
+                        <el-row>
+                          <el-col :span="13">
+                            <a href="">
+                              <figure>
+                                <img src="<%- require('@/assets/imgs/demo512x391.jpg') %>" alt="" />
+                                <figcaption>
+                                  <!-- <h3>人大首场发布会2</h3> -->
+                                  <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                                </figcaption>
+                              </figure>
+                            </a>
+                          </el-col>
+                          <el-col :span="11">
+                            <el-row>
+                              <el-col :span="15">
+                                <a href="">
+                                  <figure>
+                                    <img height="240" src="<%- require('@/assets/imgs/demo512x391.jpg') %>" alt="" />
+                                    <figcaption>
+                                      <!-- <h3>人大首场发布会2</h3> -->
+                                      <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                                    </figcaption>
+                                  </figure>
+                                </a>
+                              </el-col>
+                              <el-col :span="9">
+                                <a href="">
+                                  <figure>
+                                    <img height="240" src="<%- require('@/assets/imgs/demo512x391.jpg') %>" alt="" />
+                                    <figcaption>
+                                      <!-- <h3>人大首场发布会2</h3> -->
+                                      <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                                    </figcaption>
+                                  </figure>
+                                </a>
+                              </el-col>
+                            </el-row>
+                            <el-row>
+                              <el-col :span="12">
+                                <a href="">
+                                  <figure>
+                                    <img height="157" src="<%- require('@/assets/imgs/demo512x391.jpg') %>" alt="" />
+                                    <figcaption>
+                                      <!-- <h3>人大首场发布会2</h3> -->
+                                      <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                                    </figcaption>
+                                  </figure>
+                                </a>
+                              </el-col>
+                              <el-col :span="12">
+                                <a href="">
+                                  <figure>
+                                    <img height="157" src="<%- require('@/assets/imgs/demo512x391.jpg') %>" alt="" />
+                                    <figcaption>
+                                      <!-- <h3>人大首场发布会2</h3> -->
+                                      <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                                    </figcaption>
+                                  </figure>
+                                </a>
+                              </el-col>
+                            </el-row>
+                          </el-col>
+                        </el-row>
+                      </div>
+                    </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <!-- 房产 汽车 财经 -->
+              <section class="mt30">
+                <el-row :gutter="30">
+                  <el-col :span="9">
+                    <div class="simple-card">
+                      <div class="simple-card-header yellow">
+                        <h3 class="title">房产 ESTATE</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="9">
+                    <div class="simple-card">
+                      <div class="simple-card-header yellow">
+                        <h3 class="title">汽车 CARS</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <el-carousel height="230px">
+                            <el-carousel-item>
+                              <figure>
+                                <a href=""><img src="<%- require('@/assets/imgs/demo480x333.jpg') %>" alt="" /></a>
+                                <figcaption class="fix-bottom">
+                                  <!-- <h3>人大首场发布会</h3> -->
+                                  <p>3月4日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                                </figcaption>
+                              </figure>
+                            </el-carousel-item>
+                            <el-carousel-item>
+                              <figure height="">
+                                <a href=""><img src="<%- require('@/assets/imgs/demo480x333.jpg') %>" alt="" /></a>
+                                <figcaption class="fix-bottom">
+                                  <!-- <h3>人大首场发布会2</h3> -->
+                                  <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                                </figcaption>
+                              </figure>
+                            </el-carousel-item>
+                          </el-carousel>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag yellow">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag yellow">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="6">
+                    <div class="simple-card">
+                      <div class="simple-card-header yellow">
+                        <h3 class="title">财经 FINANCE</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                      </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <!-- 体育 新闻 -->
+              <section class="mt30">
+                <el-row :gutter="30">
+                  <el-col :span="9">
+                    <div class="simple-card">
+                      <div class="simple-card-header orange">
+                        <h3 class="title">体育新闻 SPORTS</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <el-row :gutter="20">
+                            <el-col :span="8">
+                              <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                            </el-col>
+                            <el-col :span="8">
+                              <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                            </el-col>
+                            <el-col :span="8">
+                              <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                            </el-col>
+                          </el-row>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag orange">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag orange">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag orange">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="9">
+                    <div class="simple-card">
+                      <div class="simple-card-header orange">
+                        <h3 class="title">老牛侃球 FOOTBALL REVIEWS</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag orange">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag orange">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag orange">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag orange">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag orange">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="6">
+                    <div class="simple-card">
+                      <div class="simple-card-header orange">
+                        <h3 class="title">快讯 FLASH</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo196x63.jpg') %>" alt="" /></a>
+                        </div>
+                        <div class="card-p">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo196x63.jpg') %>" alt="" /></a>
+                        </div>
+                        <div class="card-p">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo196x63.jpg') %>" alt="" /></a>
+                        </div>
+                        <div class="card-p">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo196x63.jpg') %>" alt="" /></a>
+                        </div>
+                      </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <!-- 文化 民俗 -->
+              <section class="mt30">
+                <el-row :gutter="30">
+                  <el-col :span="9">
+                    <div class="simple-card">
+                      <div class="simple-card-header orange">
+                        <h3 class="title">文化动态 CULTURE</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag orange">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag orange">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag orange">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag orange">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="9">
+                    <div class="simple-card">
+                      <div class="simple-card-header orange">
+                        <h3 class="title">朝鲜民俗 FOLK CUSTOM</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <el-row :gutter="20">
+                            <el-col :span="8">
+                              <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                            </el-col>
+                            <el-col :span="8">
+                              <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                            </el-col>
+                            <el-col :span="8">
+                              <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                            </el-col>
+                          </el-row>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag orange">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag orange">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="6">
+                    <div class="simple-card">
+                      <div class="simple-card-header orange">
+                        <h3 class="title">长白山 MOUNTAIN</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                      </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <!-- 优惠打折 美食 旅游 -->
+              <section class="mt30">
+                <el-row :gutter="30">
+                  <el-col :span="9">
+                    <div class="simple-card">
+                      <div class="simple-card-header purple">
+                        <h3 class="title">优惠打折 PROMOTION</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="9">
+                    <div class="simple-card">
+                      <div class="simple-card-header purple">
+                        <h3 class="title">食全食美 DELICIOUS</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <el-carousel height="230px">
+                            <el-carousel-item>
+                              <figure>
+                                <a href=""><img src="<%- require('@/assets/imgs/demo480x333.jpg') %>" alt="" /></a>
+                                <figcaption class="fix-bottom">
+                                  <!-- <h3>人大首场发布会</h3> -->
+                                  <p>3月4日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                                </figcaption>
+                              </figure>
+                            </el-carousel-item>
+                            <el-carousel-item>
+                              <figure height="">
+                                <a href=""><img src="<%- require('@/assets/imgs/demo480x333.jpg') %>" alt="" /></a>
+                                <figcaption class="fix-bottom">
+                                  <!-- <h3>人大首场发布会2</h3> -->
+                                  <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                                </figcaption>
+                              </figure>
+                            </el-carousel-item>
+                          </el-carousel>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag purple">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag purple">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="6">
+                    <div class="simple-card">
+                      <div class="simple-card-header purple">
+                        <h3 class="title">旅游咨询 TRAVEL</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                      </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <section class="mt30 mb30">
+                <a href="">
+                <img src="<%- require('@/assets/imgs/ad-demo.jpg') %>" alt="" />
+              </a>
+              </section>
               </div>
-            </el-col>
-          </el-row>
-        </section>
-        </div>
-        </div>
-        <!-- built files will be auto injected -->
-        <%- require('../common/footer.html') %>
+              <%- require('../common/footer.ejs')({footer: 'footer1'}) %>
+                </div>
+                </div>
+                </div>
+                <!-- built files will be auto injected -->
+  </body>
+
+</html>

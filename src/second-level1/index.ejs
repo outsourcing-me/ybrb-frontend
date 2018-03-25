@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<%- require('../common/head.ejs')() %>
+
+  <body>
+    <div id="app">
+      <div class="container" v-cloak>
+        <%- require('../common/sidemenu.ejs')() %>
+          <div class="body">
+            <%- require('../common/header.ejs')({header: 'header2', menu: 'menu2', menuClass: 'purple'}) %>
+              <!-- 优惠打折 美食 旅游 -->
+              <section class="mt30">
+                <el-row :gutter="30">
+                  <el-col :span="18">
+                    <div class="simple-card">
+                      <div class="simple-card-header purple">
+                        <h3 class="title">
+                          <el-breadcrumb separator-class="el-icon-arrow-right">
+                            <el-breadcrumb-item href=""><a href="">首页</a></el-breadcrumb-item>
+                            <el-breadcrumb-item href=""><a href="">二级页面</a></el-breadcrumb-item>
+                            <el-breadcrumb-item href=""><a href="">列表页</a></el-breadcrumb-item>
+                          </el-breadcrumb>
+                        </h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-item">
+                          <img class="thumb" src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasssasdfasfasfasfafasfasfasfsafsasdfasfasdfsfsfs</a>
+                        </div>
+                        <div class="card-item">
+                          <img class="thumb" src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasssasdfasfasfasfafasfasfasfsafsasdfasfasdfsfsfs</a>
+                        </div>
+                        <div class="card-item">
+                          <img class="thumb" src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasssasdfasfasfasfafasfasfasfsafsasdfasfasdfsfsfs</a>
+                        </div>
+                        <div class="card-item">
+                          <img class="thumb" src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasssasdfasfasfasfafasfasfasfsafsasdfasfasdfsfsfs</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="6">
+                    <div class="simple-card">
+                      <div class="simple-card-header purple">
+                        <h3 class="title">旅游咨询 TRAVEL</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">文太家員邊里試愛有更能</a>
+                        </div>
+                      </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <section class="mt30 mb30">
+                <a href="">
+                <img src="<%- require('@/assets/imgs/ad-demo.jpg') %>" alt="" />
+              </a>
+              </section>
+              </div>
+              <%- require('../common/footer.ejs')({footer: 'footer2'}) %>
+          </div>
+      </div>
+      <!-- built files will be auto injected -->
+    </div>
+  </body>
+
+</html>

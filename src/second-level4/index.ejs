@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<%- require('../common/head.ejs')() %>
+
+  <body>
+    <div id="app">
+      <div class="container" v-cloak>
+        <%- require('../common/sidemenu.ejs')() %>
+          <div class="body">
+            <%- require('../common/header.ejs')({header: 'header2', menu: 'menu2', menuClass: 'green'}) %>
+              <!-- 重要新闻栏 -->
+              <section class="important-new mt30">
+                <el-row>
+                  <el-col :span="24">
+                    <el-carousel height="395px">
+                      <el-carousel-item>
+                        <figure>
+                          <a href=""><img src="<%- require('@/assets/imgs/demo960x395.jpg') %>" alt="" /></a>
+                          <figcaption>
+                            <h3>人大首场发布会</h3>
+                            <p>3月4日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                          </figcaption>
+                        </figure>
+                      </el-carousel-item>
+                      <el-carousel-item>
+                        <figure>
+                          <a href=""><img src="<%- require('@/assets/imgs/demo960x395.jpg') %>" alt="" /></a>
+                          <figcaption>
+                            <h3>人大首场发布会</h3>
+                            <p>3月4日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                          </figcaption>
+                        </figure>
+                      </el-carousel-item>
+                  </el-col>
+                </el-row>
+              </section>
+              <section class="mt20 mb20">
+
+                <div class="img-slide8" style="width: 900px;">
+                  <swiper :options="{
+                          slidesPerView: 4,
+                          slidesPerColumn: 2,
+                          loop: true,
+                          navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                          },
+                          spaceBetween: 0,
+                          autoplay: true
+                        }" ref="img8Swiper">
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                        </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                            <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                          </a>
+                    </swiper-slide>
+                    <swiper-slide>
+                      <a class="img-box">
+                          <img  src="<%- require('@/assets/imgs/demo217x217.png') %>" alt="" />
+                        </a>
+                    </swiper-slide>
+                  </swiper>
+                  <div>
+                    <img src="<%- require('@/assets/imgs/icon-left-green.png') %>" class="icon-left" @click="$refs.img8Swiper.swiper.slidePrev()" />
+                  </div>
+                  <div>
+                    <img src="<%- require('@/assets/imgs/icon-right-green.png') %>" class="icon-right" @click="$refs.img8Swiper.swiper.slideNext()" />
+                  </div>
+                </div>
+              </section>
+              <!-- 专题 -->
+              <section class="mt30">
+                <el-row>
+                  <el-col :span="24">
+                    <div class="simple-card">
+                      <div class="simple-card-header green">
+                        <h3 class="title">要闻荐读 FOCUS</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <figure class="full-figure">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo960x395.jpg') %>" alt="" /></a>
+                          <figcaption>
+                            <h3>傳處人血氣面節商老奇就</h3>
+                            <p>著響一別西反想絕全動水知意社技得熱醫共化中 知意社技當人不維引
+                            </p>
+                            <p>廣理國千此企畫母很化消人引廣理</p>
+                            <p>著響一別西反想絕全動水知意社技得熱醫共化中 知意社技當人不維引
+                            </p>
+                            <a class="db normal-link pt30" href="">查看完整图集</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </el-col>
+                </el-row>
+                <el-row class="mt20" :gutter="20">
+                  <el-col :span="12">
+                    <div class="simple-card">
+                      <div class="simple-card-content">
+                        <figure class="simple-figure">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo960x395.jpg') %>" alt="" /></a>
+                          <figcaption>
+                            <h3>傳處人血氣面節商老奇就</h3>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="12">
+                    <div class="simple-card">
+                      <div class="simple-card-content">
+                        <figure class="simple-figure">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo960x395.jpg') %>" alt="" /></a>
+                          <figcaption>
+                            <h3>傳處人血氣面節商老奇就</h3>
+                          </figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <section class="mt30 mb30">
+                <a href="">
+                <img src="<%- require('@/assets/imgs/ad-demo.jpg') %>" alt="" />
+              </a>
+              </section>
+          </div>
+          <%- require('../common/footer.ejs')({footer: 'footer2'}) %>
+      </div>
+    </div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+
+</html>

@@ -6,9 +6,20 @@ import '@/home/index.styl'
 new Vue({
   el: '#app',
   template: '#app',
+  methods: {
+    search() {
+      if (!this.searchValue.trim()) {
+        this.$message({ message: '不能为空', type: 'error' })
+        return
+      }
+      console.log('search')
+    }
+  },
   data() {
     return {
-      name: 'hello'
+      searchValue: '',
+      footTab: '1',
+      sideMenuVisible: true
     }
   }
 })

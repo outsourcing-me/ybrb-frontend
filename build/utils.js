@@ -26,7 +26,7 @@ exports.getEntry = function() {
 }
 
 exports.getEntry().forEach(item => {
-  pageExtractCssArray.push(new ExtractTextPlugin(exports.assetsPath(item + '/[name].[contenthash].css')))
+  pageExtractCssArray.push(new ExtractTextPlugin(exports.assetsPath('css/[name].css')))
 })
 
 exports.pageExtractCssArray = pageExtractCssArray
@@ -37,7 +37,8 @@ exports.cssLoaders = function(options) {
   var cssLoader = {
     loader: 'css-loader',
     options: {
-      minimize: process.env.NODE_ENV === 'production',
+      // minimize: process.env.NODE_ENV === 'production',
+      minimize: false,
       autoprefixer: false,
       sourceMap: options.sourceMap
     }
@@ -45,7 +46,7 @@ exports.cssLoaders = function(options) {
 
   // generate loader string to be used with extract text plugin
   function generateLoaders(loader, loaderOptions) {
-    var loaders = ['style-loader', cssLoader]
+    var loaders = [cssLoader]
     if (loader) {
       loaders.push({
         loader: loader + '-loader',
@@ -65,7 +66,11 @@ exports.cssLoaders = function(options) {
     // } else {
     //   return ['style-loader'].concat(loaders)
     // }
-    return loaders
+    if (options.extract) {
+      return loaders
+    } else {
+      return ['style-loader'].concat(loaders)
+    }
   }
 
   // http://vuejs.github.io/vue-loader/en/configurations/extract-css.html
@@ -103,7 +108,13 @@ exports.styleLoaders = function(options) {
           sourceMap: options.sourceMap,
           plugins: function() {
             return [
-              require('autoprefixer')({ browsers: ['last 5 versions'] })
+              require('autoprefixer')({
+                browsers: [
+                  '> 1%',
+                  'last 10 versions',
+                  'not ie <= 8'
+                ]
+              })
             ]
           }
         }

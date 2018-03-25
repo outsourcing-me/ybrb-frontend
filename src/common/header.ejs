@@ -9,14 +9,51 @@
       </el-col>
       <el-col :span="12">
         <el-row :gutter="10">
-          <el-col :span="10" class="text-right">
-            <a href="">联系我们</a>
+          <el-col :span="4" :offset="2" class="text-right">
+            <el-popover ref="popover1" placement="bottom-start" title="" width="330" trigger="hover" popper-class="popover-mobile">
+              <div class="inner">
+                <div class="line">
+                  <img src="<%- require('@/assets/imgs/icon-wx.png') %>" alt="" />
+                  <p>搜索微信公众号：
+                    <br> yanbianribao</p>
+                </div>
+                <div class="line">
+                  <img src="<%- require('@/assets/imgs/icon-wb.png') %>" alt="" />
+                  <p>搜索微博账号：
+                    <br> 延边日报</p>
+                </div>
+                <div class="line">
+                  <img src="<%- require('@/assets/imgs/icon-app.png') %>" alt="" />
+                  <p>前往Apple Store或Android应用商店下载：
+                    <br> 延边日报</p>
+                </div>
+              </div>
+            </el-popover>
+            <a v-popover:popover1 href="">移动端</a>
+          </el-col>
+          <el-col :span="4" class="text-right">
+            <el-popover ref="popover2" placement="bottom-start" title="" width="330" trigger="hover" popper-class="popover-contact">
+              <div class="inner">
+                <a href="https://map.baidu.com/?latlng=42.907903,129.51832&title=延边日报&autoOpen=true&l" target="_blank">
+                  <img src="<%- require('@/assets/imgs/address.jpg') %>" alt="" />
+                </a>
+                <div class="detail">
+                  <p>地址：吉林省延吉市光明街89号 </p>
+                  <p>邮编：133000</p>
+                  <p>电话：<a href="tel:0433-2518770">0433-2518770</a></p>
+                  <p>邮箱：<a href="mailto:yanbianwanghanwen@qq.com">yanbianwanghanwen@qq.com</a></p>
+                </div>
+              </div>
+            </el-popover>
+            <a v-popover:popover2 href="">联系我们</a>
           </el-col>
           <el-col :span="14">
             <el-col :span="4" class="text-right">搜索</el-col>
             <el-col :span="20">
-              <input type="text" class="search-btn" />
-              <i class="iconfont icon-search"></i>
+              <form action="">
+                <input v-model="searchValue" type="text" class="search-btn" @keydown.13.prevent="search" />
+                <i class="iconfont icon-search" @click="search"></i>
+              </form>
             </el-col>
           </el-col>
         </el-row>
@@ -26,20 +63,30 @@
   <!-- 二级header -->
   <section class="slogan-header">
     <el-row>
-      <el-col :span="12">
-        <img src="<%- require('@/assets/imgs/logo1.jpg') %>" alt="" />
-        <img class="ml10" src="<%- require('@/assets/imgs/logo2.jpg') %>" alt="" />
-        <div class="mt5">
-          <small>2018年11月24日 延吉 多云 -2 ~ 4℃ 东风3级</small>
-        </div>
-      </el-col>
-      <el-col :span="12" class="text-right">
-        <img src="<%- require('@/assets/imgs/header-side.jpg') %>" alt="" />
-      </el-col>
+      <% if (header && header === 'header1') { %>
+        <el-col :span="12">
+          <img src="<%- require('@/assets/imgs/logo1.jpg') %>" alt="" />
+          <img class="ml10" src="<%- require('@/assets/imgs/logo2.jpg') %>" alt="" />
+          <div class="mt5">
+            <small>2018年11月24日 延吉 多云 -2 ~ 4℃ 东风3级</small>
+          </div>
+        </el-col>
+        <% } else if (header && header === 'header2'){ %>
+          <el-col :span="12" class="header2">
+            <img class="fl" src="<%- require('@/assets/imgs/logo3.jpg') %>" alt="" />
+            <div class="weather mt40">
+              <small>2018年11月24日 <br>延吉 多云 -2 ~ 4℃ 东风3级</small>
+            </div>
+          </el-col>
+          <% } %>
+        <el-col :span="12" class="text-right">
+          <img src="<%- require('@/assets/imgs/header-side.jpg') %>" alt="" />
+        </el-col>
     </el-row>
   </section>
 
   <!-- 菜单 -->
+  <% if (menu && menu === 'menu1') { %>
   <section class="menu">
     <nav class="main-nav">
       <a href="">
@@ -68,4 +115,21 @@
       <a href="">此企</a>
     </nav>
   </section>
+  <% } else if (menu && menu === 'menu2') { %>
+  <section class="menu <%= menuClass %>">
+    <nav class="main-nav">
+      <a href="">
+        <i class="iconfont icon-home ft20"></i>
+      </a>
+      <a class="active" href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+      <a href="">二级菜单</a>
+    </nav>
+  </section>
+<% } %>
 </header>

@@ -39,8 +39,10 @@ var webpackConfig = merge(baseWebpackConfig, {
 utils.getEntry().forEach(pathname => {
   let conf = {
     filename: pathname + '.html',
+    template:  'ejs-compiled-loader!' + path.join(__dirname, '../src', pathname, 'index.ejs'),
     inject: true,
-    template:  'ejs-compiled-loader!' + path.join(__dirname, '../src', pathname, 'index.ejs')
+    chunks: ['manifest', 'vendor', pathname],
+    chunksSortMode: 'dependency'
   }
   webpackConfig.plugins.push(new HtmlWebpackPlugin(conf))
 })

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<%- require('../common/head.ejs')() %>
+
+  <body>
+    <div id="app">
+      <div class="container" v-cloak>
+        <%- require('../common/sidemenu.ejs')() %>
+          <div class="body">
+            <%- require('../common/header.ejs')({header: 'header2', menu: 'menu2', menuClass: 'main'}) %>
+              <!-- 重要新闻栏 -->
+              <section class="important-new mt30">
+                <el-row>
+                  <el-col :span="12">
+                    <el-carousel height="330px">
+                      <el-carousel-item>
+                        <figure>
+                          <a href=""><img src="<%- require('@/assets/imgs/demo480x333.jpg') %>" alt="" /></a>
+                          <figcaption>
+                            <h3>人大首场发布会</h3>
+                            <p>3月4日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                          </figcaption>
+                        </figure>
+                      </el-carousel-item>
+                      <el-carousel-item>
+                        <figure height="">
+                          <a href=""><img src="<%- require('@/assets/imgs/demo480x333.jpg') %>" alt="" /></a>
+                          <figcaption>
+                            <h3>人大首场发布会2</h3>
+                            <p>3月8日，十三届全国人大一次会议在人民大会堂新闻发布厅举行新闻发布会。</p>
+                          </figcaption>
+                        </figure>
+                      </el-carousel-item>
+                    </el-carousel>
+                    <div class="keywords">
+                      <h4>今日热词 KEYWORDS</h4>
+                      <ul class="keywords-item">
+                        <li><a href="">顧達</a></li>
+                        <li><a href="">爸謝能</a></li>
+                        <li><a href="">日華</a></li>
+                        <li><a href="">出統入對特費心</a></li>
+                        <li><a href="">級族利就香該表</a></li>
+                        <li><a href="">意家</a></li>
+                        <li><a href="">完在如</a></li>
+                        <li><a href="">轉式身條復</a></li>
+                        <li><a href="">去男邊草可議身是客</a></li>
+                        <li><a href="">意華</a></li>
+                        <li><a href="">還傳們當</a></li>
+                        <li><a href="">南當</a></li>
+                        <li><a href="">結標大這心個</a></li>
+                      </ul>
+                    </div>
+                  </el-col>
+                  <el-col :span="12">
+                    <div class="news-list">
+                      <el-row class="header">
+                        <el-col :span="18">
+                          <h4>新闻 NEWS</h4>
+                        </el-col>
+                        <el-col :span="6" class="text-right">
+                          <a href="">更多
+                      <span class="ft18">&raquo;</span>
+                    </a>
+                        </el-col>
+                      </el-row>
+                      <div class="news-body">
+                        <div class="new-card">
+                          <h3><a class="new-link" href="">傳處人血氣面節商老奇就</a></h3>
+                          <a class="new-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                          <a class="new-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="new-card">
+                          <h3>
+                      <a class="new-link" href="">傳處人血氣面老奇就</a>
+                      <a class="new-link" href="">血氣面節商老奇就</a>
+                    </h3>
+                          <a class="new-link" href="">著響一別西反想</a>
+                          <a class="new-link" href="">著響一別西反想</a>
+                          <a class="new-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="new-card">
+                          <h3><a class="new-link" href="">傳處人血氣面節商老奇就</a></h3>
+                          <a class="new-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                          <a class="new-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <!-- 要闻荐读 FOCUS 社会 数字报 -->
+              <section class="mt30">
+                <el-row :gutter="30">
+                  <el-col :span="9">
+                    <div class="simple-card">
+                      <div class="simple-card-header">
+                        <h3 class="title">要闻荐读 FOCUS</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                        <div class="card-item">
+                          <h3>沒關千包到個不開這腦學性</h3>
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技aaaasss</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="9">
+                    <div class="simple-card">
+                      <div class="simple-card-header">
+                        <h3 class="title">社会 SOCIAL</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <el-row :gutter="20">
+                            <el-col :span="8">
+                              <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                            </el-col>
+                            <el-col :span="8">
+                              <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                            </el-col>
+                            <el-col :span="8">
+                              <img src="<%- require('@/assets/imgs/demo105x105.jpg') %>" alt="" />
+                            </el-col>
+                          </el-row>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href=""><span class="tag">Tag</span>著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="6">
+                    <div class="simple-card">
+                      <div class="simple-card-header">
+                        <h3 class="title">快讯 FLASH</h3>
+                        <a href="" class="more">更多<span class="ft18">&raquo;</span></a>
+                      </div>
+                      <div class="simple-card-content">
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <div class="card-p">
+                          <a class="normal-link" href="">著響一別西反想絕全動水知意社技得熱醫共化中知意社技</a>
+                        </div>
+                        <!-- <a href=""><img src="<%- require('@/assets/imgs/demo192x344.jpg') %>" alt="" /></a> -->
+                      </div>
+                  </el-col>
+                </el-row>
+              </section>
+              <section class="mt30 mb30">
+                <a href="">
+                <img src="<%- require('@/assets/imgs/ad-demo.jpg') %>" alt="" />
+              </a>
+              </section>
+              </div>
+              <%- require('../common/footer.ejs')({footer: 'footer2'}) %>
+          </div>
+      </div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+
+</html>

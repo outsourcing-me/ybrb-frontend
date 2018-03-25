@@ -1,0 +1,252 @@
+.container {
+  .body {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+.popover-contact {
+  // width: 100%;
+  border-color: xxs-gray-color; // background-color: #3a3a3a;
+  img {
+    width: 100%;
+  }
+  .detail {
+    padding: 10px 0;
+  }
+}
+
+.popover-mobile {
+  .line {
+    overflow: hidden;
+    margin: 10px 0;
+    img {
+      float: left;
+      margin-right: 10px;
+    }
+    p {
+      margin-top: 5px;
+      margin-left: 10px;
+      overflow: hidden;
+    }
+  }
+}
+
+.search-bar {
+  margin: 30px 0 25px;
+  line-height: 45px;
+  border: 2px solid gray-color;
+  border-width: 2px 0 2px 0;
+  padding: 0 5px;
+  a {
+    color: inherit;
+    &:hover {
+      color: main-color;
+    }
+  }
+  .icon-search {
+    position: absolute;
+    right: 15px;
+    top: 2px;
+  }
+  .search-btn {
+    width: 100%;
+    height: 25px;
+    --webkit-apprearance: none;
+    background: s-gray-color;
+    border: 1px solid gray-color;
+  }
+  .icon-search {
+    color: gray-color - 20%;
+    cursor: pointer;
+  }
+}
+
+.menu {
+  line-height: 45px;
+  margin: 15px 0;
+  font-size: 16px; // border-bottom: 2px solid main-color;
+  a {
+    color: inherit;
+  }
+  &.purple {
+    .main-nav {
+      background-color: purple-color;
+    }
+  }
+  &.main {
+    .main-nav {
+      background-color: main-color;
+    }
+  }
+  &.yellow {
+    .main-nav {
+      background-color: yellow-color;
+    }
+  }
+  &.blue {
+    .main-nav {
+      background-color: blue-color;
+    }
+  }
+  &.orange {
+    .main-nav {
+      background-color: orange-color;
+    }
+  }
+  &.green {
+    .main-nav {
+      background-color: green-color;
+    }
+  }
+  .main-nav {
+    color: white; // padding: 0 5px;
+    background-color: #3a3a3a;
+    font-weight: bold;
+    overflow: hidden;
+    a {
+      padding: 0 11px;
+      float: left;
+      position: relative;
+      &.active,
+      &:hover {
+        &:after {
+          content: '';
+          position: absolute;
+          border: 2px solid main-color;
+          left: 0;
+          bottom: -2px;
+          right: 0;
+        }
+      }
+      &.blue {
+        &.active,
+        &:hover {
+          &:after {
+            border-color: blue-color;
+          }
+        }
+      }
+      &.green {
+        &.active,
+        &:hover {
+          &:after {
+            border-color: green-color;
+          }
+        }
+      }
+      &.yellow {
+        &.active,
+        &:hover {
+          &:after {
+            border-color: yellow-color;
+          }
+        }
+      }
+      &.orange {
+        &.active,
+        &:hover {
+          &:after {
+            border-color: orange-color;
+          }
+        }
+      }
+      &.purple {
+        &.active,
+        &:hover {
+          &:after {
+            border-color: purple-color;
+          }
+        }
+      }
+    }
+  }
+  .sub-nav {
+    overflow: hidden;
+    padding-left: 35px;
+    a {
+      float: left;
+      padding: 0 11px;
+      &:hover {
+        color: main-color;
+      }
+    }
+  }
+}
+
+footer {
+  color: l-gray-color;
+  padding-top: 30px;
+  background-color: xxs-gray-color;
+  .footer-container {
+    width: 960px;
+    margin: 0 auto;
+  }
+  .footer-title {
+    text-align: center;
+  }
+  .tabs {
+    overflow: hidden;
+    border-bottom: 1px solid l-gray-color + 30%;
+    &>a {
+      float: left;
+      color: inherit;
+      padding: 5px 12px;
+      &.active,
+      &:hover {
+        color: white;
+        background-color: l-gray-color + 30%;
+      }
+    }
+  }
+  .tabs-container {
+    padding: 15px 0;
+    a {
+      line-height: 1.8em;
+      color: inherit;
+      margin-right: 10px;
+    }
+  }
+  .coperator-logos {
+    position: relative;
+    background-color: white;
+    padding: 0 35px;
+    .el-icon-caret-left,
+    .el-icon-caret-right {
+      color: font-color;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      &:hover {
+        color: main-color;
+      }
+    }
+    .el-icon-caret-left {
+      left: 10px;
+    }
+    .el-icon-caret-right {
+      right: 10px;
+    }
+    .logo {
+      display: block;
+      margin: 10px;
+    }
+  }
+  .qrcode {
+    text-align: center;
+    margin: 30px 0 0;
+    figure {
+      padding: 5px;
+      background-color: white;
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+  .footer-info {
+    text-align: center;
+    padding: 30px 0;
+    color: font-color;
+    line-height: 1.6em;
+  }
+}
