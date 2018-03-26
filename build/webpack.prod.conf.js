@@ -6,6 +6,7 @@ var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var HtmlBeautifyPlugin = require('html-beautify-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
@@ -126,5 +127,24 @@ utils.getEntry().forEach(pathname => {
   }
   webpackConfig.plugins.push(new HtmlWebpackPlugin(conf))
 })
+
+webpackConfig.plugins.push(new HtmlBeautifyPlugin({
+  config: {
+    html: {
+      'allowed_file_extensions': ['htm', 'html', 'xhtml', 'shtml', 'xml', 'svg', 'vue', 'ejs'],
+      'brace_style': 'collapse', // [collapse|expand|end-expand|none] Put braces on the same line as control statements (default), or put braces on own line (Allman / ANSI style), or just put end braces on own line, or attempt to keep them where they are
+      'end_with_newline': false, // End output with newline
+      'indent_char': ' ', // Indentation character
+      'indent_handlebars': false, // e.g. {{#foo}}, {{/foo}}
+      'indent_inner_html': false, // Indent <head> and <body> sections
+      'indent_scripts': 'keep', // [keep|separate|normal]
+      'indent_size': 2, // Indentation size
+      'max_preserve_newlines': 2, // Maximum number of line breaks to be preserved in one chunk (0 disables)
+      'preserve_newlines': true, // Whether existing line breaks before elements should be preserved (only works before elements, not inside tags or for text)
+      'unformatted': ['template', 'code', 'pre', 'sub', 'sup', 'em', 'strong', 'b', 'i', 'u', 'strike', 'big', 'small', 'pre'],
+      'wrap_line_length': 0 // Lines should wrap at next opportunity after this number of characters (0 disables)
+    }
+  }
+}))
 
 module.exports = webpackConfig

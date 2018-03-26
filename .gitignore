@@ -8,3 +8,4 @@ test/e2e/reports
 selenium-debug.log
 .todo
 www/demo.md
+*.zip
