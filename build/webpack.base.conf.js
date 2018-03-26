@@ -12,12 +12,12 @@ function addEnty() {
   utils.getEntry().forEach(item => {
     entryObj[item] = resolve('src/' + item + '/index.js')
   })
-  console.log(entryObj)
+  // console.log(entryObj)
   return entryObj
 }
 
 module.exports = {
-  entry: addEnty,
+  entry: addEnty(),
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',

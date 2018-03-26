@@ -21,7 +21,7 @@ exports.getEntry = function() {
     if (dirname !== 'src/common')
       entries.push(dirname.replace(new RegExp('^' + pathDir), '$2'))
   }
-  console.log(entries)
+  // console.log(entries)
   return entries
 }
 
