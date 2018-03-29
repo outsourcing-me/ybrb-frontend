@@ -114,15 +114,12 @@
           <!-- 二级header -->
           <section class="slogan-header">
             <el-row>
-
-              <el-col :span="12">
-                <img src="./static/img/logo1.jpg" alt="" />
-                <img class="ml10" src="./static/img/logo2.jpg" alt="" />
+              <el-col :span="12" class="header2">
+                <img class="ml10" src="./static/img/logo1.jpg" alt="" />
                 <div class="mt5">
                   <small>2018年11月24日 延吉 多云 -2 ~ 4℃ 东风3级</small>
                 </div>
               </el-col>
-
               <el-col :span="12" class="text-right">
                 <img src="./static/img/header-side.jpg" alt="" />
               </el-col>
@@ -133,31 +130,89 @@
 
           <section class="menu">
             <nav class="main-nav">
-              <a href="">
+              <a href="/home.html">
                 <i class="iconfont icon-home ft20"></i>
               </a>
-              <a class="active" href="">新闻</a>
-              <a href="">社会</a>
-              <a href="">国内</a>
-              <a href="">国际</a>
-              <a class="blue" href="">视频</a>
-              <a class="green" href="">直播</a>
-              <a class="green" href="">图片</a>
-              <a class="green" href="">行摄延边</a>
-              <a class="yellow" href="">房产•汽车•财经</a>
-              <a class="orange" href="">健康•教育</a>
-              <a class="orange" href="">老牛侃球</a>
-              <a class="purple" href="">旅游•美食•购物</a>
+              <a @mouseleave="hideSubMenu(1)" @mouseenter="showSubMenu(1)" class="active" href="">新闻</a>
+              <a @mouseleave="hideSubMenu(2)" @mouseenter="showSubMenu(2)" href="">社会</a>
+              <a @mouseleave="hideSubMenu(3)" @mouseenter="showSubMenu(3)" href="">国内</a>
+              <a @mouseleave="hideSubMenu(4)" @mouseenter="showSubMenu(4)" href="">国际</a>
+              <a @mouseleave="hideSubMenu(5)" @mouseenter="showSubMenu(5)" class="blue" href="">视频</a>
+              <a @mouseleave="hideSubMenu(6)" @mouseenter="showSubMenu(6)" class="green" href="">文化</a>
+              <a @mouseleave="hideSubMenu(7)" @mouseenter="showSubMenu(7)" class="green" href="">图片</a>
+              <a @mouseleave="hideSubMenu(8)" @mouseenter="showSubMenu(8)" class="green" href="">行摄延边</a>
+              <a @mouseleave="hideSubMenu(9)" @mouseenter="showSubMenu(9)" class="yellow" href="">房产•汽车•财经</a>
+              <a @mouseleave="hideSubMenu(10)" @mouseenter="showSubMenu(10)" class="orange" href="">健康•教育</a>
+              <a @mouseleave="hideSubMenu(11)" @mouseenter="showSubMenu(11)" class="orange" href="">足球</a>
+              <a @mouseleave="hideSubMenu(12)" @mouseenter="showSubMenu(12)" class="orange" href="">数字报</a>
+              <a @mouseleave="hideSubMenu(13)" @mouseenter="showSubMenu(13)" class="purple" href="">旅游•美食•购物</a>
             </nav>
-            <nav class="sub-nav">
-              <a href="">熱醫</a>
-              <a href="">共化</a>
-              <a href="">中當人不</a>
-              <a href="">維引</a>
-              <a href="">廣理</a>
-              <a href="">國千</a>
-              <a href="">此企</a>
+            <nav v-if="subMenuShow && subMenuIndex === 1" @mouseenter="showSubMenu(1)" @mouseleave="hideSubMenu()" class="sub-nav">
+              <a class="" href="">新闻子菜单</a>
+              <a href="">新闻子菜单</a>
+              <a href="">新闻子菜单</a>
             </nav>
+            <nav v-else-if="subMenuShow && subMenuIndex === 2" @mouseenter="showSubMenu(2)" @mouseleave="hideSubMenu()" class="sub-nav">
+              <a class="" href="">社会子菜单</a>
+              <a href="">社会子菜单</a>
+              <a href="">社会子菜单</a>
+            </nav>
+            <nav v-else-if="subMenuShow && subMenuIndex === 3" @mouseenter="showSubMenu(3)" @mouseleave="hideSubMenu()" class="sub-nav">
+              <a class="" href="">国内子菜单</a>
+              <a href="">国内子菜单</a>
+              <a href="">国内子菜单</a>
+            </nav>
+            <nav v-else-if="subMenuShow && subMenuIndex === 4" @mouseenter="showSubMenu(4)" @mouseleave="hideSubMenu()" class="sub-nav">
+              <a class="" href="">国际子菜单</a>
+              <a href="">国际子菜单</a>
+              <a href="">国际子菜单</a>
+            </nav>
+            <nav v-else-if="subMenuShow && subMenuIndex === 5" @mouseenter="showSubMenu(5)" @mouseleave="hideSubMenu()" class="sub-nav blue">
+              <a class="" href="">视频子菜单</a>
+              <a href="">视频子菜单</a>
+              <a href="">视频子菜单</a>
+            </nav>
+            <nav v-else-if="subMenuShow && subMenuIndex === 6" @mouseenter="showSubMenu(6)" @mouseleave="hideSubMenu()" class="sub-nav green">
+              <a class="" href="">文化子菜单</a>
+              <a href="">文化子菜单</a>
+              <a href="">文化子菜单</a>
+            </nav>
+            <nav v-else-if="subMenuShow && subMenuIndex === 7" @mouseenter="showSubMenu(7)" @mouseleave="hideSubMenu()" class="sub-nav green">
+              <a class="" href="">图片子菜单</a>
+              <a href="">图片子菜单</a>
+              <a href="">图片子菜单</a>
+            </nav>
+            <nav v-else-if="subMenuShow && subMenuIndex === 8" @mouseenter="showSubMenu(8)" @mouseleave="hideSubMenu()" class="sub-nav green">
+              <a class="" href="">航摄延边</a>
+              <a href="">航摄延边</a>
+              <a href="">航摄延边</a>
+            </nav>
+            <nav v-else-if="subMenuShow && subMenuIndex === 9" @mouseenter="showSubMenu(9)" @mouseleave="hideSubMenu()" class="sub-nav yellow">
+              <a class="" href="">房产子菜单</a>
+              <a href="">房产子菜单</a>
+              <a href="">房产子菜单</a>
+            </nav>
+            <nav v-else-if="subMenuShow && subMenuIndex === 10" @mouseenter="showSubMenu(10)" @mouseleave="hideSubMenu()" class="sub-nav orange">
+              <a class="" href="">健康紫菜单</a>
+              <a href="">健康紫菜单</a>
+              <a href="">健康紫菜单</a>
+            </nav>
+            <nav v-else-if="subMenuShow && subMenuIndex === 11" @mouseenter="showSubMenu(11)" @mouseleave="hideSubMenu()" class="sub-nav orange">
+              <a class="" href="">足球子菜单</a>
+              <a href="">足球子菜单</a>
+              <a href="">足球子菜单</a>
+            </nav>
+            <nav v-else-if="subMenuShow && subMenuIndex === 12" @mouseenter="showSubMenu(12)" @mouseleave="hideSubMenu()" class="sub-nav orange">
+              <a class="" href="">数字报</a>
+              <a href="">数字报</a>
+              <a href="">数字报</a>
+            </nav>
+            <nav v-else-if="subMenuShow && subMenuIndex === 13" @mouseenter="showSubMenu(13)" @mouseleave="hideSubMenu()" class="sub-nav purple">
+              <a class="" href="">旅游子菜单</a>
+              <a href="">旅游子菜单</a>
+              <a href="">旅游子菜单</a>
+            </nav>
+
           </section>
 
         </header>

@@ -17,7 +17,7 @@ function addEnty() {
 }
 
 module.exports = {
-  entry: addEnty(),
+  entry: addEnty,
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',

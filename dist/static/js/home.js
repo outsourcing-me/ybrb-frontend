@@ -46,6 +46,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 new __WEBPACK_IMPORTED_MODULE_1_vue__["default"]({
   el: '#app',
   template: '#app',
+  timeoutHandle: null,
   methods: {
     search: function search() {
       if (!this.searchValue.trim()) {
@@ -53,12 +54,27 @@ new __WEBPACK_IMPORTED_MODULE_1_vue__["default"]({
         return;
       }
       console.log('search');
+    },
+    hideSubMenu: function hideSubMenu() {
+      var _this = this;
+
+      clearTimeout(this.timeoutHandle);
+      this.timeoutHandle = setTimeout(function () {
+        _this.subMenuShow = false;
+      }, 300);
+    },
+    showSubMenu: function showSubMenu(index) {
+      clearTimeout(this.timeoutHandle);
+      this.subMenuShow = true;
+      this.subMenuIndex = index;
     }
   },
   data: function data() {
     return {
       searchValue: '',
       footTab: '1',
+      subMenuIndex: 0,
+      subMenuShow: false,
       sideMenuVisible: true
     };
   }

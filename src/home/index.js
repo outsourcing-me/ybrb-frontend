@@ -6,6 +6,7 @@ import '@/home/index.styl'
 new Vue({
   el: '#app',
   template: '#app',
+  timeoutHandle: null,
   methods: {
     search() {
       if (!this.searchValue.trim()) {
@@ -13,12 +14,25 @@ new Vue({
         return
       }
       console.log('search')
+    },
+    hideSubMenu() {
+      clearTimeout(this.timeoutHandle)
+      this.timeoutHandle = setTimeout(() => {
+        this.subMenuShow = false
+      }, 300)
+    },
+    showSubMenu(index) {
+      clearTimeout(this.timeoutHandle)
+      this.subMenuShow = true
+      this.subMenuIndex = index
     }
   },
   data() {
     return {
       searchValue: '',
       footTab: '1',
+      subMenuIndex: 0,
+      subMenuShow: false,
       sideMenuVisible: true
     }
   }
